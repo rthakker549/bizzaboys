@@ -9,14 +9,14 @@ function App() {
   return (
     <div className="App">
       <Navbar>
-        <NavbarBrand href="#">Bizza</NavbarBrand>
-        <Nav>
-        <NavItem>
+        <NavbarBrand>Bizza</NavbarBrand>
+          <Nav>
+            <NavItem>
               <NavLink active href="#">
                 Order Now
               </NavLink>
             </NavItem>
-            </Nav>
+          </Nav>
       </Navbar>
       <header className="App-header">
         <p>
