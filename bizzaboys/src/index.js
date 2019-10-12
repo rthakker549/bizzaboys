@@ -11,9 +11,9 @@ import TopNavbar from './components/TopNavbar';
 const routing  = (
     <Router>
         <div>
-            <TopNavbar/>
-            <Route exact path="/" component={App}/>
-            <Route path="/order" component={Order}/>
+          <TopNavbar/>
+          <Route exact path="/" component={App}/>
+          <Route path="/order" component={Order}/>
         </div>
     </Router>
 )
