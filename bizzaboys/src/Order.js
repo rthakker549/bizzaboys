@@ -12,14 +12,12 @@ function Order() {
     <div className="Order">
       <div class="orderForm">
         <Form>
-          <FormGroup inline>
-            <label htmlFor="#firstname">First</label>
-            <FormInput inline id="#firstname" placeholder="First"/>
-            <label htmlFor="#lastname">Last</label>
-            <FormInput inline id="#lastname" placeholder="Last"/>
-            <label htmlFor="#email">Email Address</label>
-            <FormInput inline type="email" id="#email" placeholder="abc@example.com"/>
-          </FormGroup>
+          <label htmlFor="#firstname">First</label>
+          <FormInput id="#firstname" placeholder="First"/>
+          <label htmlFor="#lastname">Last</label>
+          <FormInput id="#lastname" placeholder="Last"/>
+          <label htmlFor="#email">Phone Number</label>
+          <FormInput type="tel" id="#phone" placeholder="1234567890"/>
           <label htmlFor="#building">Building</label>
           <FormSelect>
             <option value="buildingOne">Kauffman</option>
