@@ -25,7 +25,7 @@ router.post('/order', function(req,res) {
         room: room
     })
 
-    req.send("Order Completed")
+    res.send("Order Completed")
 })
 
 
