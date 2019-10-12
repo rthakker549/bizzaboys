@@ -1,10 +1,10 @@
 module.exports = {
-  pizzaName: pizzaName,
-  crust: crust,
-  sauce: sauce,
-  cheese: cheese,
-  veggies: veggies,
-  meat: meat,
-  price: price,
-  review: review
+  pizzaName: String,
+  crust: String,
+  sauce: String,
+  cheese: String,
+  veggies: String,
+  meat: String,
+  price: Number,
+  review: Number
 }
