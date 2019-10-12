@@ -5,13 +5,15 @@ import App from './App';
 import Order from './Order'
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import TopNavbar from './components/TopNavbar';
 
 
 const routing  = (
     <Router>
         <div>
+            <TopNavbar/>
             <Route exact path="/" component={App}/>
-            <Route path="/orders" component={Orders}/>
+            <Route path="/order" component={Order}/>
         </div>
     </Router>
 )

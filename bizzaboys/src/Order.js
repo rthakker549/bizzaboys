@@ -10,16 +10,6 @@ import './App.css';
 function Order() {
   return (
     <div className="Order">
-      <Navbar>
-        <NavbarBrand>Bizza</NavbarBrand>
-          <Nav>
-            <NavItem>
-              <NavLink active href="#">
-                Order Now
-              </NavLink>
-            </NavItem>
-          </Nav>
-      </Navbar>
       <div class="orderForm">
         <Form>
           <FormGroup inline>

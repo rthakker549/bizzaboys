@@ -8,16 +8,6 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Navbar>
-        <NavbarBrand>Bizza</NavbarBrand>
-          <Nav>
-            <NavItem>
-              <NavLink active href="#">
-                Order Now
-              </NavLink>
-            </NavItem>
-          </Nav>
-      </Navbar>
       <header className="App-header">
         <p>
           bizza.xyz coming soon
