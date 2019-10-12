@@ -34,7 +34,9 @@ function Order() {
             </option>
             <option value="vegan">Vegan</option>
           </FormSelect>
-          <Button>Submit Order</Button>
+          <br/>
+          <br/>
+          <Button outline>Submit Order</Button>
         </Form>
       </div>
     </div>
