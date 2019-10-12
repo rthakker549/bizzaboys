@@ -14,6 +14,11 @@ function TopNavbar() {
               Order Now
             </NavLink>
           </NavItem>
+          <NavItem>
+            <NavLink active href="/admin">
+              Admin
+            </NavLink>
+          </NavItem>
         </Nav>
     </Navbar>
   );
