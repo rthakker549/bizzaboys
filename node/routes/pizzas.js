@@ -29,7 +29,7 @@ router.post('/pizza', function(req,res) {
       review: review
     })
 
-    req.send("Pizza Completed")
+    res.send("Pizza Completed")
 })
 
 
