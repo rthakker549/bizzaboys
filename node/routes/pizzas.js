@@ -17,6 +17,7 @@ router.post('/pizza', function(req,res) {
     let meat = req.meat;
     let price = req.price;
     let review = req.review;
+    let inventory = req.inventory;
 
     Pizzas.insert({
       pizzaName: pizzaName,
@@ -26,7 +27,8 @@ router.post('/pizza', function(req,res) {
       veggies: veggies,
       meat: meat,
       price: price,
-      review: review
+      review: review,
+      inventory: inventory
     })
 
     res.send("Pizza Completed")
