@@ -27,6 +27,8 @@ function Order() {
             <FormInput inline id="#firstname" placeholder="First"/>
             <label htmlFor="#lastname">Last</label>
             <FormInput inline id="#lastname" placeholder="Last"/>
+            <label htmlFor="#email">Email Address</label>
+            <FormInput inline type="email" id="#email" placeholder="abc@example.com"/>
           </FormGroup>
           <label htmlFor="#building">Building</label>
           <FormSelect>
