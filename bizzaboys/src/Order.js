@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, NavbarBrand, Nav, NavLink, NavItem } from "shards-react";
 import { Form, FormInput, FormGroup, FormSelect } from "shards-react";
+import { Button } from "shards-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
 import logo from './logo.svg';
@@ -21,10 +22,12 @@ function Order() {
       </Navbar>
       <div class="orderForm">
         <Form>
-          <label htmlFor="#firstname">First</label>
-          <FormInput id="#firstname" placeholder="First" />
-          <label htmlFor="#lastname">Last</label>
-          <FormInput id="#lastname" placeholder="Last" />
+          <FormGroup inline>
+            <label htmlFor="#firstname">First</label>
+            <FormInput inline id="#firstname" placeholder="First"/>
+            <label htmlFor="#lastname">Last</label>
+            <FormInput inline id="#lastname" placeholder="Last"/>
+          </FormGroup>
           <label htmlFor="#building">Building</label>
           <FormSelect>
             <option value="buildingOne">Kauffman</option>
@@ -41,6 +44,7 @@ function Order() {
             </option>
             <option value="vegan">Vegan</option>
           </FormSelect>
+          <Button>Submit Order</Button>
         </Form>
       </div>
     </div>
