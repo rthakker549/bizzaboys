@@ -22,7 +22,7 @@ router.post('/customer', function(req,res) {
         organization: organization,
     })
 
-    req.send("Customer Completed")
+    res.send("Customer Completed")
 })
 
 
