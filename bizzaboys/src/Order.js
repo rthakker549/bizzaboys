@@ -7,7 +7,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
 import './App.css';
 
-
 class Order extends React.Component {
 
   state = {
@@ -37,7 +36,7 @@ class Order extends React.Component {
 
   renderRedirect = () => {
     if (this.state.redirect) {
-      return <Redirect to='/thankyou' />
+      return <Redirect to='/' />
     }
   }
 

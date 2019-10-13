@@ -24,6 +24,11 @@ function TopNavbar() {
             </NavLink>
           </NavItem>
           <NavItem>
+            <NavLink active href="/rewards">
+              Rewards
+            </NavLink>
+          </NavItem>
+          <NavItem>
             <NavLink active href="/admin">
               Admin
             </NavLink>
