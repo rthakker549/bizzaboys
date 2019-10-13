@@ -1,14 +1,21 @@
 import React from 'react';
-import { Navbar, NavbarBrand, Nav, NavLink, NavItem } from "shards-react";
+import { Form, FormInput } from "shards-react";
+import { Button } from "shards-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
-import logo from './logo.svg';
 import './App.css';
 
 function Admin() {
   return (
     <div className="Admin">
-      
+      <div className="adminForm">
+        <Form>
+          <label htmlFor="#code">Enter Admin Access Code:</label>
+          <FormInput type="password" id="#code" placeholder="Admin Access Code"/>
+          <br/>
+          <Button outline type="submit">Enter Admin Portal</Button>
+        </Form>
+      </div>
     </div>
   );
 }
