@@ -32,7 +32,7 @@ router.post('/postReview', function(req, res) {
 
     bc.Reviews.insert({
         pizza: pizza,
-        rating: rating,
+        rating: Number(rating),
         description: description
     })
 
