@@ -7,9 +7,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          bizza.xyz coming soon
-        </p>
+        <img src="bizza.jpg"></img>
+        <br></br>
+        <p>Bizza.</p>
+        <p>Cooked, Cut, and Delivered Quickly.</p>
+        <button>Order Now</button>
       </header>
     </div>
   );
