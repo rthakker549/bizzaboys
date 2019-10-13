@@ -4,5 +4,6 @@ module.exports = {
     phoneNumber: String,
     pizza: String,
     building: String,
-    room: String
+    room: String,
+    completed: Boolean
 }
