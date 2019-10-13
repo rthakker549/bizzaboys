@@ -15,8 +15,8 @@ router.post('/order', function(req,res) {
     let pizza = req.pizza;
     let building = req.string;
     let room = req.room;
-    
-    Orders.insert({
+
+    bc.Orders.insert({
         firstName: firstName,
         lastName: lastName,
         email: email,
