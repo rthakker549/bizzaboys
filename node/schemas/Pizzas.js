@@ -6,5 +6,6 @@ module.exports = {
     veggies: String,
     meat: String,
     price: Number,
-    review: Number
+    review: Number,
+    inventory: Number
 }
