@@ -55,6 +55,11 @@
   align-items: center;
   text-align: center;
 }
+.PostOrder {
+  padding: 16em;
+  align-items: center;
+  text-align: center;
+}
 .adminCard {
   margin: 2em;
 }

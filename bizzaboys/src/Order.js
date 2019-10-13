@@ -37,7 +37,7 @@ class Order extends React.Component {
 
   renderRedirect = () => {
     if (this.state.redirect) {
-      return <Redirect to='/' />
+      return <Redirect to='/thankyou' />
     }
   }
 

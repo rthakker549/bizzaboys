@@ -13,7 +13,6 @@ class Admin extends React.Component {
   }
 
   setRedirect = (event) => {
-    console.log(event.target.elements.code.value)
     if (event.target.elements.code.value === '69420') {
       this.setState({
         redirect: true
