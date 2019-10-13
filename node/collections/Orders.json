@@ -58,5 +58,17 @@
     "_id": "e96gk9ch2er",
     "_createdDate": 1570946131009,
     "_updatedDate": 1570946131009
+  },
+  {
+    "firstName": "Andre",
+    "lastName": "Garivay",
+    "phoneNumber": "2183161504",
+    "pizza": "cheese",
+    "building": "buildingOne",
+    "room": "987",
+    "completed": false,
+    "_id": "ufztxlz3t4q",
+    "_createdDate": 1570974407590,
+    "_updatedDate": 1570974407590
   }
 ]

@@ -12,7 +12,6 @@ class AdminPortal extends React.Component {
         <Card className="adminCard" id="inventory">
           <CardBody>
             <CardTitle href='/inventory'>Inventory</CardTitle>
-            <CardSubtitle>Current Inventory</CardSubtitle>
             <CardLink href='/inventory'> View current inventory here.</CardLink>
             <br/>
             <CardLink href='/updateinventory'> Update current inventory here.</CardLink>
@@ -21,17 +20,19 @@ class AdminPortal extends React.Component {
 
         <Card className="adminCard" id="orders">
           <CardBody>
-            <CardTitle>Orders</CardTitle>
-            <CardSubtitle>Past orders</CardSubtitle>
+            <CardTitle>Past Orders</CardTitle>
+            <CardLink href='/unfulfilled'> View unfulfilled orders here.</CardLink>
+            <br/>
             <CardLink href='/orderslist'> View all previous orders here.</CardLink>
           </CardBody>
         </Card>
 
-        <Card className="adminCard" id="newpizza">
+        <Card className="adminCard" id="managepizza">
           <CardBody>
-            <CardTitle>New Pizza</CardTitle>
-            <CardSubtitle>Add a new pizza.</CardSubtitle>
+            <CardTitle>Manage Pizzas</CardTitle>
             <CardLink href='/new'> Create a new pizza and add it to inventory here.</CardLink>
+            <br/>
+            <CardLink href='/remove'> Remove an old pizza.</CardLink>
           </CardBody>
         </Card>
       </div>

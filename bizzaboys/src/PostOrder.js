@@ -1,5 +1,4 @@
 import React from 'react';
-import { Form, FormInput } from "shards-react";
 import { Button } from "shards-react";
 import { Redirect } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";

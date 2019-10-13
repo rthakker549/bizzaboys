@@ -9,8 +9,18 @@ function TopNavbar() {
       <NavbarBrand href="/">Bizza</NavbarBrand>
         <Nav>
           <NavItem>
+            <NavLink active href="/pizzas">
+              Pizzas
+            </NavLink>
+          </NavItem>
+          <NavItem>
             <NavLink active href="/order">
               Order Now
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink active href="/review">
+              Leave a Review
             </NavLink>
           </NavItem>
           <NavItem>

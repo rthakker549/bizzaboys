@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, FormInput, FormSelect, FormTextarea } from "shards-react";
+import { Form, FormInput, FormTextarea } from "shards-react";
 import { Button } from "shards-react";
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
