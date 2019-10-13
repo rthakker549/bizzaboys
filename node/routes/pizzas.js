@@ -50,7 +50,6 @@ router.put('/decreasePizzaInventory', function(req,res) {
 /* Delete a 'zza */
 router.put('/deletePizza', function(req,res) {
     let pizzaName = req.query.pizzaName;
-    let pizza = bc.Pizzas.find({pizzaName:pizzaName})
     bc.Pizzas.delete({pizzaName:pizzaName});
     res.send("Pizza Inventory Update Completed")
 })
