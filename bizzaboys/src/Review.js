@@ -9,7 +9,7 @@ import "shards-ui/dist/css/shards.min.css"
 import './App.css';
 
 
-class Order extends React.Component {
+class Review extends React.Component {
 
   state = {
     redirect: false,
@@ -73,4 +73,4 @@ class Order extends React.Component {
   }
 }
 
-export default Order;
+export default Review;

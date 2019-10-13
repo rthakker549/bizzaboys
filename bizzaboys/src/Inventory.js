@@ -3,31 +3,27 @@ import { Card, CardBody, CardTitle, CardSubtitle } from "shards-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 import './App.css';
+import axios from "axios"
 
-function Inventory() {
 
-  function listInventory() {
-    // GET inventory
-    let inventory = [{
-      pizzaName: "cheese",
-      description: "Cheesey, gooey, delicious",
-      price: 4,
-      review: 5,
-      inventory: 7
-    }, {
-      pizzaName: "pepperoni",
-      description: "Papa Pepperoni",
-      price: 5,
-      review: 4.3,
-      inventory: 11
-    }]
-    return inventory;
+
+export default class Inventory extends React.Component {
+  state = {
+    data: []
   }
 
 
+  componentDidMount() {
+    axios.get("http://localhost:9000/pizzas")
+      .then(res => {
+        const data = res.data;
+        this.setState({ data });
+      })
+  }
+  render() {
   return (
     <div className="Portal">
-      { listInventory().map(el =>
+      {this.state.data.length > 0 ? this.state.data.map(el =>
         <Card className="inventoryCard" key={ el.pizzaName }>
           <CardBody>
             <CardTitle href='/inventory'>{ el.pizzaName }</CardTitle>
@@ -37,9 +33,9 @@ function Inventory() {
             { el.description }
           </CardBody>
         </Card>
-      )}
+      ) : <h2>No pizzas</h2>}
     </div>
   );
+      }
 }
 
-export default Inventory;

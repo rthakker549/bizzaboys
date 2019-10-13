@@ -8,7 +8,7 @@ import "shards-ui/dist/css/shards.min.css"
 import './App.css';
 
 
-class Order extends React.Component {
+class NewPizza extends React.Component {
 
   state = {
     redirect: false
@@ -18,14 +18,16 @@ class Order extends React.Component {
     const elements = event.target.elements;
     const update = {
       pizzaName: elements.name.value,
-      inventory: elements.add.value
+      imageurl: elements.imageurl.value,
+      description: elements.description.value,
+      price: elements.price.value,
+      inventory: elements.inventory.value
     }
-    // axios.post(`http://localhost:9000/orders/order?firstname=${newOrder.firstName}&lastname=${newOrder.lastName}` +
-    // `&phoneNumber=${newOrder.phoneNumber}&pizza=${newOrder.pizza}&building=${newOrder.building}&room=${newOrder.room}`).then(function (response) {
-    //   console.log(response);
-    // }).catch(function (error) {
-    //   console.log(error.response);
-    // })
+    axios.post("http://localhost:9000/pizzas/pizza", update).then(function (response) {
+      console.log(response);
+    }).catch(function (error) {
+      console.log(error.response);
+    })
     this.setState({
       redirect: true
     })
@@ -55,7 +57,7 @@ class Order extends React.Component {
             <label htmlFor="inventory">Initial Inventory</label>
             <FormInput id="inventory" placeholder="Initial Inventory" type="number"/>
             <br/>
-            <Button outline type="submit">Submit Order</Button>
+            <Button outline type="submit">Add Pizza</Button>
           </Form>
         </div>
       </div>
@@ -63,4 +65,4 @@ class Order extends React.Component {
   }
 }
 
-export default Order;
+export default NewPizza;

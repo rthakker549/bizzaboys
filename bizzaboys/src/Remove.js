@@ -19,12 +19,11 @@ class UpdateInventory extends React.Component {
     const update = {
       pizzaName: elements.name.value
     }
-    // axios.post(`http://localhost:9000/orders/order?firstname=${newOrder.firstName}&lastname=${newOrder.lastName}` +
-    // `&phoneNumber=${newOrder.phoneNumber}&pizza=${newOrder.pizza}&building=${newOrder.building}&room=${newOrder.room}`).then(function (response) {
-    //   console.log(response);
-    // }).catch(function (error) {
-    //   console.log(error.response);
-    // })
+    axios.delete("http://locahost:9000/deletePizza",update).then(function (response) {
+    console.log(response);
+    }).catch(function (error) {
+    console.log(error.response);
+    })
     this.setState({
       redirect: true
     })

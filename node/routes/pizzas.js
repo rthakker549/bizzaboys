@@ -21,17 +21,16 @@ router.post('/pizza', function(req,res) {
     let description = req.body.description;
     let imageurl = req.body.imageurl;
     let price = req.body.price;
-    let review = req.body.review;
     let inventory = req.body.inventory;
-    console.log(req)
+
 
     bc.Pizzas.insert({
       pizzaName: pizzaName,
       description: description,
       imageurl: imageurl,
-      price: price,
-      review: review,
-      inventory: inventory
+      price: Number(price),
+      review: 0,
+      inventory: Number(inventory)
     })
 
     res.send("Pizza Completed")
