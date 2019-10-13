@@ -9,7 +9,7 @@ router.get('/', function (req, res, next) {
 });
 
 /* GET all available pizzas. */
-router.get('/', function (req, res, next) {
+router.get('/available', function (req, res, next) {
     let allPizzas = bc.Pizzas.findAll({});
     let availablePizzas = allPizzas.filter(x => x.inventory > 0);
     res.json(availablePizzas);
@@ -17,12 +17,13 @@ router.get('/', function (req, res, next) {
 
 /* POST new pizza to database. */
 router.post('/pizza', function(req,res) {
-    let pizzaName = req.query.pizzaName;
-    let description = req.query.description;
-    let imageurl = req.query.imageurl;
-    let price = req.query.price;
-    let review = req.query.review;
-    let inventory = req.query.inventory;
+    let pizzaName = req.body.pizzaName;
+    let description = req.body.description;
+    let imageurl = req.body.imageurl;
+    let price = req.body.price;
+    let review = req.body.review;
+    let inventory = req.body.inventory;
+    console.log(req)
 
     bc.Pizzas.insert({
       pizzaName: pizzaName,
@@ -38,7 +39,7 @@ router.post('/pizza', function(req,res) {
 
 /* PUT pizza inventory. */
 router.put('/decreasePizzaInventory', function(req,res) {
-    let pizzaName = req.query.pizzaName;
+    let pizzaName = req.body.pizzaName;
     let pizza = bc.Pizzas.find({pizzaName:pizzaName})
     let inventory = pizza.inventory;
     inventory--;
@@ -48,8 +49,8 @@ router.put('/decreasePizzaInventory', function(req,res) {
 
 
 /* Delete a 'zza */
-router.put('/deletePizza', function(req,res) {
-    let pizzaName = req.query.pizzaName;
+router.delete('/deletePizza', function(req,res) {
+    let pizzaName = req.body.pizzaName;
     bc.Pizzas.delete({pizzaName:pizzaName});
     res.send("Pizza Inventory Update Completed")
 })

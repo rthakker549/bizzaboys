@@ -1,26 +1,15 @@
 [
   {
-    "firstName": "Andre",
-    "lastName": "Garivay",
-    "phoneNumber": "2183161504",
-    "pizza": "cheese",
-    "building": "buildingOne",
-    "room": "123",
-    "completed": false,
-    "_id": "7si57kj3tqf",
-    "_createdDate": 1570936509712,
-    "_updatedDate": 1570936509712
-  },
-  {
-    "firstName": "Ben",
-    "lastName": "Affleck",
-    "phoneNumber": "1234567890",
-    "pizza": "cheese",
-    "building": "buildingOne",
-    "room": "123",
-    "completed": false,
-    "_id": "mgqv4m7k7xs",
-    "_createdDate": 1570936665474,
-    "_updatedDate": 1570936665474
+    "firstName": "a",
+    "lastName": "a",
+    "phoneNumber": "a",
+    "pizza": "a",
+    "building": "a",
+    "room": "a",
+    "completed": true,
+    "_id": "hbnvvk9v4ho",
+    "_createdDate": 1570975135927,
+    "_updatedDate": 1570975135927,
+    "_modDate": 1570975146722
   }
 ]
