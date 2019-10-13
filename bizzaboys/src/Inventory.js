@@ -33,7 +33,7 @@ function Inventory() {
             <CardTitle href='/inventory'>{ el.pizzaName }</CardTitle>
             <br/>
             <CardSubtitle>${ el.price }, { el.review } stars, { el.inventory } left</CardSubtitle>
-            <br/> 
+            <br/>
             { el.description }
           </CardBody>
         </Card>

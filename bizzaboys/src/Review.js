@@ -1,8 +1,9 @@
 import React from 'react';
-import { Form, FormInput, FormTextarea } from "shards-react";
+import { Form, FormSelect, FormTextarea } from "shards-react";
 import { Button } from "shards-react";
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
+import Rating from 'react-rating';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
 import './App.css';
@@ -11,15 +12,22 @@ import './App.css';
 class Order extends React.Component {
 
   state = {
-    redirect: false
+    redirect: false,
+    rating: 0
+  }
+
+  handleRatingChange = (value) => {
+    this.state.rating = value;
   }
 
   setRedirect = (event) => {
     const elements = event.target.elements;
     const update = {
       pizzaName: elements.name.value,
-      inventory: elements.add.value
+      rating: this.state.rating,
+      review: elements.review.value
     }
+    console.log(update);
     // axios.post(`http://localhost:9000/orders/order?firstname=${newOrder.firstName}&lastname=${newOrder.lastName}` +
     // `&phoneNumber=${newOrder.phoneNumber}&pizza=${newOrder.pizza}&building=${newOrder.building}&room=${newOrder.room}`).then(function (response) {
     //   console.log(response);
@@ -33,7 +41,7 @@ class Order extends React.Component {
 
   renderRedirect = () => {
     if (this.state.redirect) {
-      return <Redirect to='/inventory' />
+      return <Redirect to='/' />
     }
   }
 
@@ -41,21 +49,23 @@ class Order extends React.Component {
     return (
       <div className="NewPizza">
         {this.renderRedirect()}
-        <h1>Add a New Pizza</h1>
+        <h1>Leave a Review</h1>
         <div className="orderForm">
           <Form onSubmit={this.setRedirect}>
-            <label htmlFor="name">Pizza Name</label>
-            <FormInput id="name" placeholder="Pizza"/>
-            <label htmlFor="imageurl">Image URL</label>
-            <FormInput id="imageurl" placeholder="Image"/>
-            <label htmlFor="description">Description</label>
-            <FormTextarea type="textarea" id="description" placeholder="Describe the pizza."/>
-            <label htmlFor="price">Price</label>
-            <FormInput id="price" placeholder="$$$" type="number" step="0.01"/>
-            <label htmlFor="inventory">Initial Inventory</label>
-            <FormInput id="inventory" placeholder="Initial Inventory" type="number"/>
+            <label htmlFor="name">Choose a Pizza to Review</label>
+            <FormSelect id="name">
+              <option value="cheese">Cheese</option>
+              <option value="pepperoni">Pepperoni</option>
+              <option value="vegan">Vegan</option>
+            </FormSelect>
+            <label htmlFor="rating">Rating</label>
             <br/>
-            <Button outline type="submit">Submit Order</Button>
+            <Rating id="rating" onChange={this.handleRatingChange}/>
+            <br/>
+            <label htmlFor="description">Review</label>
+            <FormTextarea type="textarea" id="review" placeholder="Leave a review."/>
+            <br/>
+            <Button outline type="submit">Submit Review</Button>
           </Form>
         </div>
       </div>

@@ -9,6 +9,10 @@ import Inventory from './Inventory';
 import OrdersList from './OrdersList';
 import NewPizza from './NewPizza';
 import UpdateInventory from './UpdateInventory';
+import PostOrder from './PostOrder';
+import Review from './Review';
+import Remove from './Remove';
+import Unfulfilled from './Unfulfilled';
 import * as serviceWorker from './serviceWorker';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import TopNavbar from './components/TopNavbar';
@@ -26,6 +30,11 @@ const routing  = (
           <Route path="/orderslist" component={OrdersList}/>
           <Route path="/new" component={NewPizza}/>
           <Route path="/updateinventory" component={UpdateInventory}/>
+          <Route path="/thankyou" component={PostOrder}/>
+          <Route path="/review" component={Review}/>
+          <Route path="/pizzas" component={Inventory}/>
+          <Route path="/remove" component={Remove}/>
+          <Route path="/unfulfilled" component={Unfulfilled}/>
         </div>
     </Router>
 )
