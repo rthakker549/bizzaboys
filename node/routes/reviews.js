@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 let bc = require('badcube');
-let math = require('mathjs');
+import {mean} from 'mathjs'
 
 /* GET description review and points based on pizza */
 router.get('/getAllForPizza', function (req, res) {
@@ -19,7 +19,7 @@ router.get('/getPointsForPizza', function (req, res) {
     });
 
     let pointsArray = review.map(x => x.rating);
-    let meanPoints = Math.round(math.mean(pointsArray))
+    let meanPoints = Math.round(mean(pointsArray))
 
     res.json({points: meanPoints});
 });
