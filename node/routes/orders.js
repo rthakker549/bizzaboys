@@ -9,12 +9,12 @@ router.get('/', function (req, res) {
 });
 
 router.post('/order', function(req,res) {
-    let firstName = req.query.firstname;
-    let lastName = req.query.lastname;
-    let phoneNumber = req.query.phoneNumber;
-    let pizza = req.query.pizza;
-    let building = req.query.building;
-    let room = req.query.room;
+    let firstName = req.body.firstname;
+    let lastName = req.body.lastname;
+    let phoneNumber = req.body.phoneNumber;
+    let pizza = req.body.pizza;
+    let building = req.body.building;
+    let room = req.body.room;
 
     bc.Orders.insert({
         firstName: firstName,
@@ -30,8 +30,8 @@ router.post('/order', function(req,res) {
 })
 
 router.put('/completed', function(req,res) {
-    let id = req.query.id;
-    bc.Orders.update({id:id},{completed:true});
+    let id = req.body.id;
+    bc.Orders.update({_id:id},{completed:true});
 
     res.send("Pizza Complete")
 })
@@ -41,13 +41,13 @@ router.get('/points',function(req,res) {
 })
 
 router.get('/userPoints',function(req,res){
-    let phoneNumber = req.query.phoneNumber;
+    let phoneNumber = req.body.phoneNumber;
     let points = bc.Points.find({phoneNumber:phoneNumber})
     res.send(points);
 })
 
 router.put('/addPoints',function(req,res) {
-    let phoneNumber = req.query.phoneNumber;
+    let phoneNumber = req.body.phoneNumber;
     let user = bc.Points.find({phoneNumber:phoneNumber});
     if(user) {
         let points = user.points;

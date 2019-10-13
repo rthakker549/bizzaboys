@@ -1,74 +1,15 @@
 [
   {
-    "firstName": "Andre",
-    "lastName": "Garivay",
-    "phoneNumber": "2183161504",
-    "pizza": "cheese",
-    "building": "buildingOne",
-    "room": "123",
-    "completed": false,
-    "_id": "7si57kj3tqf",
-    "_createdDate": 1570936509712,
-    "_updatedDate": 1570936509712
-  },
-  {
-    "firstName": "Ben",
-    "lastName": "Affleck",
-    "phoneNumber": "1234567890",
-    "pizza": "cheese",
-    "building": "buildingOne",
-    "room": "123",
-    "completed": false,
-    "_id": "mgqv4m7k7xs",
-    "_createdDate": 1570936665474,
-    "_updatedDate": 1570936665474
-  },
-  {
-    "firstName": "",
-    "lastName": "",
-    "phoneNumber": "",
-    "pizza": "cheese",
-    "building": "buildingOne",
-    "room": "",
-    "completed": false,
-    "_id": "m5bm402pkd",
-    "_createdDate": 1570945857764,
-    "_updatedDate": 1570945857764
-  },
-  {
-    "firstName": "",
-    "lastName": "",
-    "phoneNumber": "",
-    "pizza": "cheese",
-    "building": "buildingOne",
-    "room": "",
-    "completed": false,
-    "_id": "tq5r1oqhvv",
-    "_createdDate": 1570945944919,
-    "_updatedDate": 1570945944919
-  },
-  {
-    "firstName": "",
-    "lastName": "",
-    "phoneNumber": "",
-    "pizza": "cheese",
-    "building": "buildingOne",
-    "room": "",
-    "completed": false,
-    "_id": "e96gk9ch2er",
-    "_createdDate": 1570946131009,
-    "_updatedDate": 1570946131009
-  },
-  {
-    "firstName": "Andre",
-    "lastName": "Garivay",
-    "phoneNumber": "2183161504",
-    "pizza": "cheese",
-    "building": "buildingOne",
-    "room": "987",
-    "completed": false,
-    "_id": "ufztxlz3t4q",
-    "_createdDate": 1570974407590,
-    "_updatedDate": 1570974407590
+    "firstName": "a",
+    "lastName": "a",
+    "phoneNumber": "a",
+    "pizza": "a",
+    "building": "a",
+    "room": "a",
+    "completed": true,
+    "_id": "hbnvvk9v4ho",
+    "_createdDate": 1570975135927,
+    "_updatedDate": 1570975135927,
+    "_modDate": 1570975146722
   }
 ]
