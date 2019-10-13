@@ -9,12 +9,13 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/order', function(req,res) {
-    let firstName = req.firstName;
-    let lastName = req.lastName;
-    let phoneNumber = req.phoneNumber;
-    let pizza = req.pizza;
-    let building = req.string;
-    let room = req.room;
+    console.log(req.query);
+    let firstName = req.query.firstname;
+    let lastName = req.query.lastname;
+    let phoneNumber = req.query.phoneNumber;
+    let pizza = req.query.pizza;
+    let building = req.query.building;
+    let room = req.query.room;
 
     bc.Orders.insert({
         firstName: firstName,
@@ -33,5 +34,3 @@ router.post('/order', function(req,res) {
 
 
 module.exports = router;
-
-
