@@ -14,6 +14,8 @@ class AdminPortal extends React.Component {
             <CardTitle href='/inventory'>Inventory</CardTitle>
             <CardSubtitle>Current Inventory</CardSubtitle>
             <CardLink href='/inventory'> View current inventory here.</CardLink>
+            <br/>
+            <CardLink href='/updateinventory'> Update current inventory here.</CardLink>
           </CardBody>
         </Card>
 
