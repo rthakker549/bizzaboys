@@ -13,6 +13,8 @@ import PostOrder from './PostOrder';
 import Review from './Review';
 import Remove from './Remove';
 import Unfulfilled from './Unfulfilled';
+import Rewards from './Rewards';
+import YourRewards from './YourRewards';
 import * as serviceWorker from './serviceWorker';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import TopNavbar from './components/TopNavbar';
@@ -35,6 +37,8 @@ const routing  = (
           <Route path="/pizzas" component={Inventory}/>
           <Route path="/remove" component={Remove}/>
           <Route path="/unfulfilled" component={Unfulfilled}/>
+          <Route path="/rewards" component={Rewards}/>
+          <Route path="/yourrewards" component={YourRewards}/>
         </div>
     </Router>
 )
