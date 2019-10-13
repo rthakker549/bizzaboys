@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Order from './Order'
-import Admin from './Admin'
+import Order from './Order';
+import Admin from './Admin';
+import AdminPortal from './AdminPortal';
+import Inventory from './Inventory';
+import OrdersList from './OrdersList';
 import * as serviceWorker from './serviceWorker';
-import { Route, BrowserRouter as Router } from 'react-router-dom'
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 import TopNavbar from './components/TopNavbar';
 
 
@@ -16,6 +19,9 @@ const routing  = (
           <Route exact path="/" component={App}/>
           <Route path="/order" component={Order}/>
           <Route path="/admin" component={Admin}/>
+          <Route path="/portal" component={AdminPortal}/>
+          <Route path="/inventory" component={Inventory}/>
+          <Route path="/orderslist" component={OrdersList}/>
         </div>
     </Router>
 )

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, FormInput, FormSelect } from "shards-react";
 import { Button } from "shards-react";
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
@@ -44,7 +44,7 @@ class Order extends React.Component {
   render() {
     return (
       <div className="Order">
-      {this.renderRedirect()}
+        {this.renderRedirect()}
         <div className="orderForm">
           <Form onSubmit={this.setRedirect}>
             <label htmlFor="firstname">First</label>
