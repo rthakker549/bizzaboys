@@ -10,7 +10,16 @@ import './App.css';
 class Order extends React.Component {
 
   state = {
-    redirect: false
+    redirect: false,
+    data: []
+  }
+
+  componentDidMount() {
+    axios.get("http://localhost:9000/pizzas/available")
+      .then(res => {
+        const data = res.data;
+        this.setState({ data });
+      })
   }
 
   setRedirect = (event) => {
@@ -28,6 +37,8 @@ class Order extends React.Component {
     }).catch(function (error) {
       console.log(error.response);
     })
+    axios.put('http://localhost:9000/pizzas/decreasePizzaInventory', {pizzaName: elements.pizza.value});
+    axios.put('http://localhost:9000/orders/addPoints', { phoneNumber: elements.phone.value })
     this.setState({
       redirect: true
     })
@@ -35,7 +46,7 @@ class Order extends React.Component {
 
   renderRedirect = () => {
     if (this.state.redirect) {
-      return <Redirect to='/' />
+      return <Redirect to='/thankyou' />
     }
   }
 
@@ -61,11 +72,9 @@ class Order extends React.Component {
             <FormInput id="room" placeholder="Room Number" type="number"/>
             <label htmlFor="pizza">What Type of Pizza?</label>
             <FormSelect id="pizza">
-              <option value="cheese">Cheese</option>
-              <option value="pepperoni" disabled>
-                Pepperoni
-              </option>
-              <option value="vegan">Vegan</option>
+              { this.state.data.map(el =>
+                <option value={ el.pizzaName }>{ el.pizzaName } (${ el.price })</option>
+              )}
             </FormSelect>
             <br/>
             <br/>

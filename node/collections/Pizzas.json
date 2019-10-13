@@ -1,24 +1,13 @@
 [
   {
-    "pizzaName": "a",
-    "description": "a",
-    "imageurl": "a",
-    "price": 4,
+    "pizzaName": "Cheese",
+    "description": "Cheese",
+    "imageurl": "ignore",
+    "price": 3,
     "review": 0,
-    "inventory": 4,
-    "_id": "sj16fjogj3l",
-    "_createdDate": 1570981953751,
-    "_updatedDate": 1570981953751
-  },
-  {
-    "pizzaName": "dsfd",
-    "description": "sdfsf",
-    "imageurl": "sdfs",
-    "price": 4,
-    "review": 0,
-    "inventory": 4,
-    "_id": "dkxoxynjgxd",
-    "_createdDate": 1570981999366,
-    "_updatedDate": 1570981999366
+    "inventory": 2,
+    "_id": "s53j3myqr7b",
+    "_createdDate": 1570988682911,
+    "_updatedDate": 1570988682911
   }
 ]

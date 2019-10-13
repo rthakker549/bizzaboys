@@ -13,7 +13,16 @@ class Review extends React.Component {
 
   state = {
     redirect: false,
-    rating: 0
+    rating: 0,
+    data: []
+  }
+
+  componentDidMount() {
+    axios.get("http://localhost:9000/pizzas")
+      .then(res => {
+        const data = res.data;
+        this.setState({ data });
+      })
   }
 
   handleRatingChange = (value) => {
@@ -23,17 +32,11 @@ class Review extends React.Component {
   setRedirect = (event) => {
     const elements = event.target.elements;
     const update = {
-      pizzaName: elements.name.value,
+      pizza: elements.name.value,
       rating: this.state.rating,
-      review: elements.review.value
+      description: elements.description.value
     }
-    console.log(update);
-    // axios.post(`http://localhost:9000/orders/order?firstname=${newOrder.firstName}&lastname=${newOrder.lastName}` +
-    // `&phoneNumber=${newOrder.phoneNumber}&pizza=${newOrder.pizza}&building=${newOrder.building}&room=${newOrder.room}`).then(function (response) {
-    //   console.log(response);
-    // }).catch(function (error) {
-    //   console.log(error.response);
-    // })
+    axios.post('http://localhost:9000/reviews/postReview', update)
     this.setState({
       redirect: true
     })
@@ -54,16 +57,16 @@ class Review extends React.Component {
           <Form onSubmit={this.setRedirect}>
             <label htmlFor="name">Choose a Pizza to Review</label>
             <FormSelect id="name">
-              <option value="cheese">Cheese</option>
-              <option value="pepperoni">Pepperoni</option>
-              <option value="vegan">Vegan</option>
+              { this.state.data.map(el =>
+                <option value={ el.pizzaName }>{ el.pizzaName }</option>
+              )}
             </FormSelect>
             <label htmlFor="rating">Rating</label>
             <br/>
             <Rating id="rating" onChange={this.handleRatingChange}/>
             <br/>
             <label htmlFor="description">Review</label>
-            <FormTextarea type="textarea" id="review" placeholder="Leave a review."/>
+            <FormTextarea type="textarea" id="description" placeholder="Leave a review."/>
             <br/>
             <Button outline type="submit">Submit Review</Button>
           </Form>

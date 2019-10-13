@@ -18,7 +18,7 @@ class NewPizza extends React.Component {
     const elements = event.target.elements;
     const update = {
       pizzaName: elements.name.value,
-      imageurl: elements.imageurl.value,
+      imageurl: "ignore",
       description: elements.description.value,
       price: elements.price.value,
       inventory: elements.inventory.value
@@ -48,8 +48,6 @@ class NewPizza extends React.Component {
           <Form onSubmit={this.setRedirect}>
             <label htmlFor="name">Pizza Name</label>
             <FormInput id="name" placeholder="Pizza"/>
-            <label htmlFor="imageurl">Image URL</label>
-            <FormInput id="imageurl" placeholder="Image"/>
             <label htmlFor="description">Description</label>
             <FormTextarea type="textarea" id="description" placeholder="Describe the pizza."/>
             <label htmlFor="price">Price</label>

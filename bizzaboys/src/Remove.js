@@ -11,15 +11,23 @@ import './App.css';
 class UpdateInventory extends React.Component {
 
   state = {
-    redirect: false
+    redirect: false,
+    data: []
   }
+
+
+  componentDidMount() {
+    axios.get("http://localhost:9000/pizzas")
+      .then(res => {
+        const data = res.data;
+        this.setState({ data });
+      })
+    }
 
   setRedirect = (event) => {
     const elements = event.target.elements;
-    const update = {
-      pizzaName: elements.name.value
-    }
-    axios.delete("http://locahost:9000/deletePizza",update).then(function (response) {
+    console.log({ pizzaName: elements.name.value })
+    axios.delete("http://locahost:9000/pizzas/deletePizza", { pizzaName: elements.name.value }).then(function (response) {
     console.log(response);
     }).catch(function (error) {
     console.log(error.response);
@@ -45,9 +53,9 @@ class UpdateInventory extends React.Component {
             <label htmlFor="name">Choose a Pizza to Meet its Fate</label>
             <br/>
             <FormSelect id="name">
-              <option value="cheese">Cheese</option>
-              <option value="pepperoni">Pepperoni</option>
-              <option value="vegan">Vegan</option>
+            { this.state.data.map(el =>
+              <option value={ el.pizzaName }>{ el.pizzaName }</option>
+            )}
             </FormSelect>
             <br/>
             <br/>

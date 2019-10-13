@@ -15,6 +15,7 @@ import Remove from './Remove';
 import Unfulfilled from './Unfulfilled';
 import Rewards from './Rewards';
 import YourRewards from './YourRewards';
+import PizzaReview from './PizzaReview';
 import * as serviceWorker from './serviceWorker';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import TopNavbar from './components/TopNavbar';
@@ -39,6 +40,7 @@ const routing  = (
           <Route path="/unfulfilled" component={Unfulfilled}/>
           <Route path="/rewards" component={Rewards}/>
           <Route path="/yourrewards" component={YourRewards}/>
+          <Route path="/pizzareviews" component={PizzaReview}/>
         </div>
     </Router>
 )

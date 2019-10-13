@@ -31,8 +31,6 @@ class AdminPortal extends React.Component {
           <CardBody>
             <CardTitle>Manage Pizzas</CardTitle>
             <CardLink href='/new'> Create a new pizza and add it to inventory here.</CardLink>
-            <br/>
-            <CardLink href='/remove'> Remove an old pizza.</CardLink>
           </CardBody>
         </Card>
       </div>

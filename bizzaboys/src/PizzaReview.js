@@ -4,17 +4,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 import './App.css';
 import axios from "axios";
+import Rating from 'react-rating';
 
 
 
-export default class Inventory extends React.Component {
+export default class PizzaReview extends React.Component {
   state = {
     data: []
   }
 
-
   componentDidMount() {
-    axios.get("http://localhost:9000/pizzas")
+    const queryString = require('query-string');
+    let pizza = queryString.parse(this.props.location.search).pizza;
+    axios.get("http://localhost:9000/reviews/getAllForPizza", { pizza: pizza})
       .then(res => {
         const data = res.data;
         this.setState({ data });
@@ -26,16 +28,14 @@ export default class Inventory extends React.Component {
       {this.state.data.length > 0 ? this.state.data.map(el =>
         <Card className="inventoryCard" key={ el.pizzaName }>
           <CardBody>
-            <CardTitle href='/inventory'>{ el.pizzaName }</CardTitle>
+            <CardTitle>{ el.pizza }</CardTitle>
             <br/>
-            <CardSubtitle>${ el.price }, { el.inventory } left</CardSubtitle>
+            <CardSubtitle><Rating initialRating={ el.rating } readonly/></CardSubtitle>
             <br/>
             { el.description }
-            <br/>
-            <CardLink href={'/pizzareviews?pizza=' + el.pizzaName }>View Reviews</CardLink>
           </CardBody>
         </Card>
-      ) : <h2>No pizzas</h2>}
+      ) : <h2>No reviews</h2>}
     </div>
   );
       }

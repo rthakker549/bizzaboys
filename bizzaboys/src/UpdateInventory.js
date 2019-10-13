@@ -11,7 +11,16 @@ import './App.css';
 class UpdateInventory extends React.Component {
 
   state = {
-    redirect: false
+    redirect: false,
+    data: []
+  }
+
+  componentDidMount() {
+    axios.get("http://localhost:9000/pizzas")
+      .then(res => {
+        const data = res.data;
+        this.setState({ data });
+      })
   }
 
   setRedirect = (event) => {
@@ -20,12 +29,7 @@ class UpdateInventory extends React.Component {
       pizzaName: elements.name.value,
       inventory: elements.add.value
     }
-    // axios.post(`http://localhost:9000/orders/order?firstname=${newOrder.firstName}&lastname=${newOrder.lastName}` +
-    // `&phoneNumber=${newOrder.phoneNumber}&pizza=${newOrder.pizza}&building=${newOrder.building}&room=${newOrder.room}`).then(function (response) {
-    //   console.log(response);
-    // }).catch(function (error) {
-    //   console.log(error.response);
-    // })
+    axios.put('http://localhost:9000/pizzas/pizzaInventory', update);
     this.setState({
       redirect: true
     })
@@ -46,15 +50,17 @@ class UpdateInventory extends React.Component {
           <Form onSubmit={this.setRedirect}>
             <label htmlFor="name">What Type of Pizza?</label>
             <FormSelect id="name">
-              <option value="cheese">Cheese</option>
-              <option value="pepperoni">Pepperoni</option>
-              <option value="vegan">Vegan</option>
+              { this.state.data.map(el =>
+                <option value={ el.pizzaName }>{ el.pizzaName } (${ el.price })</option>
+              )}
             </FormSelect>
+            <br/>
+            <br/>
             <label htmlFor="add">How Many?</label>
             <FormInput id="add" placeholder="# of pizzas added" type="number"/>
             <br/>
             <br/>
-            <Button outline type="submit">Submit Order</Button>
+            <Button outline type="submit">Update Inventory</Button>
           </Form>
         </div>
       </div>

@@ -5,9 +5,7 @@ const {mean} = require('mathjs')
 
 /* GET description review and points based on pizza */
 router.get('/getAllForPizza', function (req, res) {
-    let review = bc.Reviews.findAll({
-      pizza: req.body.pizza
-    });
+    let review = bc.Reviews.findAll({});
 
     res.json(review);
 });
