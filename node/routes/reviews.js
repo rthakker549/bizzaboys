@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 let bc = require('badcube');
+let math = require('mathjs');
 
 /* GET description review and points based on pizza */
 router.get('/getAllForPizza', function (req, res) {
@@ -17,10 +18,10 @@ router.get('/getPointsForPizza', function (req, res) {
       pizza: req.query.pizza
     });
 
-    let pointsArray = review.map(x=>{x.rating})
-    let meanPoints = Math.mean(pointsArray)
+    let pointsArray = review.map(x => x.rating);
+    let meanPoints = Math.round(math.mean(pointsArray))
 
-    res.json(meanPoints);
+    res.json({points: meanPoints});
 });
 
 /* POST review to database */
@@ -32,14 +33,14 @@ router.post('/postReview', function(req, res) {
     bc.Reviews.insert({
         pizza: pizza,
         rating: rating,
-        description: description,
+        description: description
     })
 
     res.send("Review Added")
 })
 
 /* Delete a review*/
-router.put('/deleteReview', function(req,res) {
+router.delete('/deleteReview', function(req,res) {
     let idName = req.query.id;
     bc.Reviews.delete({id:idName});
 
