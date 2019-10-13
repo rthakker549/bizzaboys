@@ -52,7 +52,7 @@ router.put('/addPoints',function(req,res) {
     if(user) {
         let points = user.points;
         points++;
-        bc.Points.update({phoneNumber:phoneNumber},{points:points});
+        bc.Points.update({phoneNumber:phoneNumber},{points:Number(points)});
         res.send("Points Updated");
     } else {
         bc.Points.insert({
