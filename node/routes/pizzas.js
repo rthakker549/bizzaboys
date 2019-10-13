@@ -17,11 +17,11 @@ router.get('/', function (req, res, next) {
 
 /* POST new pizza to database. */
 router.post('/pizza', function(req,res) {
-    let pizzaName = req.pizzaName;
-    let description = req.description;
-    let price = req.price;
-    let review = req.review;
-    let inventory = req.inventory;
+    let pizzaName = req.query.pizzaName;
+    let description = req.query.description;
+    let price = req.query.price;
+    let review = req.query.review;
+    let inventory = req.query.inventory;
 
     bc.Pizzas.insert({
       pizzaName: pizzaName,
