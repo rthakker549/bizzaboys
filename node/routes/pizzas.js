@@ -10,22 +10,14 @@ router.get('/', function (req, res, next) {
 
 router.post('/pizza', function(req,res) {
     let pizzaName = req.pizzaName;
-    let crust = req.crust;
-    let sauce = req.sauce;
-    let cheese = req.cheese;
-    let veggies = req.veggies;
-    let meat = req.meat;
+    let description = req.description;
     let price = req.price;
     let review = req.review;
     let inventory = req.inventory;
 
     bc.Pizzas.insert({
       pizzaName: pizzaName,
-      crust: crust,
-      sauce: sauce,
-      cheese: cheese,
-      veggies: veggies,
-      meat: meat,
+      description: description,
       price: price,
       review: review,
       inventory: inventory
