@@ -19,6 +19,7 @@ router.get('/', function (req, res, next) {
 router.post('/pizza', function(req,res) {
     let pizzaName = req.query.pizzaName;
     let description = req.query.description;
+    let imageurl = req.query.imageurl;
     let price = req.query.price;
     let review = req.query.review;
     let inventory = req.query.inventory;
@@ -26,6 +27,7 @@ router.post('/pizza', function(req,res) {
     bc.Pizzas.insert({
       pizzaName: pizzaName,
       description: description,
+      imageurl: imageurl,
       price: price,
       review: review,
       inventory: inventory
