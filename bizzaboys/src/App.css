@@ -33,6 +33,7 @@
   font-size: calc(10px + 2vmin);
 }
 .adminForm {
+  min-height: 80vh;
   align-items: center;
   text-align: center;
   display: flex;
@@ -43,4 +44,15 @@
 }
 .Admin {
   text-align: center;
+}
+.Portal {
+  padding: 8em;
+  align-items: center;
+  text-align: center;
+}
+.adminCard {
+  margin: 2em;
+}
+.inventoryCard {
+  margin: 2em;
 }
