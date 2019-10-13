@@ -7,6 +7,8 @@ import Admin from './Admin';
 import AdminPortal from './AdminPortal';
 import Inventory from './Inventory';
 import OrdersList from './OrdersList';
+import NewPizza from './NewPizza';
+import UpdateInventory from './UpdateInventory';
 import * as serviceWorker from './serviceWorker';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import TopNavbar from './components/TopNavbar';
@@ -22,6 +24,8 @@ const routing  = (
           <Route path="/portal" component={AdminPortal}/>
           <Route path="/inventory" component={Inventory}/>
           <Route path="/orderslist" component={OrdersList}/>
+          <Route path="/new" component={NewPizza}/>
+          <Route path="/updateinventory" component={UpdateInventory}/>
         </div>
     </Router>
 )

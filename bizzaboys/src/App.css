@@ -50,6 +50,11 @@
   align-items: center;
   text-align: center;
 }
+.NewPizza {
+  padding: 4em;
+  align-items: center;
+  text-align: center;
+}
 .adminCard {
   margin: 2em;
 }
