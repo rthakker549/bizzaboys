@@ -17,8 +17,8 @@ class Order extends React.Component {
   setRedirect = (event) => {
     const elements = event.target.elements;
     const newOrder = {
-      firstName: elements.firstname.value,
-      lastName: elements.lastname.value,
+      firstname: elements.firstname.value,
+      lastname: elements.lastname.value,
       phoneNumber: elements.phone.value,
       pizza: elements.pizza.value,
       building: elements.building.value,

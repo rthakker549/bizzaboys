@@ -1,15 +1,14 @@
 [
   {
-    "firstName": "a",
-    "lastName": "a",
-    "phoneNumber": "a",
-    "pizza": "a",
-    "building": "a",
-    "room": "a",
-    "completed": true,
-    "_id": "hbnvvk9v4ho",
-    "_createdDate": 1570975135927,
-    "_updatedDate": 1570975135927,
-    "_modDate": 1570975146722
+    "firstName": "Rohan",
+    "lastName": "Thakker",
+    "phoneNumber": "4023218727",
+    "pizza": "cheese",
+    "building": "buildingOne",
+    "room": "111",
+    "completed": false,
+    "_id": "bgjls36q555",
+    "_createdDate": 1570983265950,
+    "_updatedDate": 1570983265950
   }
 ]
