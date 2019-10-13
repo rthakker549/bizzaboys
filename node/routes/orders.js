@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
 router.post('/order', function(req,res) {
     let firstName = req.firstName;
     let lastName = req.lastName;
-    let email = req.email;
+    let phoneNumber = req.phoneNumber;
     let pizza = req.pizza;
     let building = req.string;
     let room = req.room;
@@ -19,14 +19,19 @@ router.post('/order', function(req,res) {
     Orders.insert({
         firstName: firstName,
         lastName: lastName,
-        email: email,
+        phoneNumber: phoneNumber,
         pizza: pizza,
         building: building,
-        room: room
+        room: room,
+        completed: false
     })
 
-    res.send("Order Completed")
+    res.send("Order Completed");
 })
 
 
+
+
 module.exports = router;
+
+

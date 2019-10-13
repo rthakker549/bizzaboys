@@ -1,8 +1,9 @@
 module.exports = {
     firstName: String,
     lastName: String,
-    email: String,
+    phoneNumber: String,
     pizza: String,
     building: String,
-    room: String
+    room: String,
+    completed: Boolean
 }
