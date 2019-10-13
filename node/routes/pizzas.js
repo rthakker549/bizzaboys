@@ -19,7 +19,7 @@ router.post('/pizza', function(req,res) {
     let review = req.review;
     let inventory = req.inventory;
 
-    Pizzas.insert({
+    bc.Pizzas.insert({
       pizzaName: pizzaName,
       crust: crust,
       sauce: sauce,

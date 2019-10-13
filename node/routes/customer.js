@@ -16,7 +16,7 @@ router.post('/customer', function(req,res) {
     let rewardsPoints = req.rewardsPoints;
     let organization = req.organization;
 
-    Customer.insert({
+    bc.Customer.insert({
         phoneNumber: phoneNumber,
         rewardsPoints: rewardsPoints,
         organization: organization,

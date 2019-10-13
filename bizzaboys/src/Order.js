@@ -15,12 +15,6 @@ class Order extends React.Component {
   }
 
   setRedirect = (event) => {
-    let axiosConfig = {
-      headers: {
-          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-          "Access-Control-Allow-Origin": "*",
-      }
-    };
     const elements = event.target.elements;
     const newOrder = {
       firstName: elements.firstname.value,
@@ -30,7 +24,8 @@ class Order extends React.Component {
       building: elements.building.value,
       room: elements.room.value
     }
-    axios.post(`http://localhost:9000/orders/order?firstname=${newOrder.firstName}&lastname=${newOrder.lastName}&phoneNumber=${newOrder.phoneNumber}&pizza=${newOrder.pizza}&building=${newOrder.building}&room=${newOrder.room}`).then(function (response) {
+    axios.post(`http://localhost:9000/orders/order?firstname=${newOrder.firstName}&lastname=${newOrder.lastName}` +
+    `&phoneNumber=${newOrder.phoneNumber}&pizza=${newOrder.pizza}&building=${newOrder.building}&room=${newOrder.room}`).then(function (response) {
       console.log(response);
     }).catch(function (error) {
       console.log(error.response);
