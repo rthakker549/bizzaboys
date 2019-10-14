@@ -1,10 +1,34 @@
 [
   {
+    "pizza": "Pepperoni",
+    "rating": 5,
+    "description": "Papa's Pepperoni is my favorite!",
+    "_id": "vbboihrsmd",
+    "_createdDate": 1570991544906,
+    "_updatedDate": 1570991544906
+  },
+  {
+    "pizza": "Pepperoni",
+    "rating": 3,
+    "description": "Crust was a little doughy for my liking.",
+    "_id": "9jnn2p4wdmv",
+    "_createdDate": 1570991571782,
+    "_updatedDate": 1570991571782
+  },
+  {
+    "pizza": "Pepperoni",
+    "rating": 1,
+    "description": "My pizza was still frozen! And moldy! And they just shot it at me with a t-shirt cannon...",
+    "_id": "w39bkibg7pc",
+    "_createdDate": 1570991646985,
+    "_updatedDate": 1570991646985
+  },
+  {
     "pizza": "Cheese",
-    "rating": 4,
-    "description": "Yum",
-    "_id": "bvqpj9tk46",
-    "_createdDate": 1570988694847,
-    "_updatedDate": 1570988694847
+    "rating": 5,
+    "description": "I loved it!",
+    "_id": "svkal8c9ve",
+    "_createdDate": 1570998149470,
+    "_updatedDate": 1570998149470
   }
 ]

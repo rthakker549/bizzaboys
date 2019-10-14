@@ -64,9 +64,9 @@ class Order extends React.Component {
             <FormInput type="tel" id="phone" placeholder="1234567890"/>
             <label htmlFor="building">Building</label>
             <FormSelect id="building">
-              <option value="buildingOne">Kauffman</option>
-              <option value="buildingTwo">Selleck</option>
-              <option value="buildingThree">Parkhaus</option>
+              <option value="Kauffman">Kauffman</option>
+              <option value="Selleck">Selleck</option>
+              <option value="Parkhaus">Parkhaus</option>
             </FormSelect>
             <label htmlFor="room">Room Number</label>
             <FormInput id="room" placeholder="Room Number" type="number"/>

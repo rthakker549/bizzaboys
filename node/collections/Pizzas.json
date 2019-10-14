@@ -1,13 +1,37 @@
 [
   {
     "pizzaName": "Cheese",
-    "description": "Cheese",
+    "description": "Cheese pizza... The classic.",
     "imageurl": "ignore",
-    "price": 3,
+    "price": 4,
     "review": 0,
-    "inventory": 2,
-    "_id": "s53j3myqr7b",
-    "_createdDate": 1570988682911,
-    "_updatedDate": 1570988682911
+    "inventory": 18,
+    "_id": "0qq0y5ijwv9b",
+    "_createdDate": 1570991395746,
+    "_updatedDate": 1570991395746,
+    "_modDate": 1570998202993
+  },
+  {
+    "pizzaName": "Pepperoni",
+    "description": "Papa pepperoni's phantastic pizza.",
+    "imageurl": "ignore",
+    "price": 4.5,
+    "review": 0,
+    "inventory": 5,
+    "_id": "oiyxvz75ro",
+    "_createdDate": 1570991458202,
+    "_updatedDate": 1570991458202,
+    "_modDate": 1570991958865
+  },
+  {
+    "pizzaName": "Gluten-Free Vegan",
+    "description": "No gluten, no dairy, no meat, no consequences!",
+    "imageurl": "ignore",
+    "price": 6,
+    "review": 0,
+    "inventory": 0,
+    "_id": "6360go085bo",
+    "_createdDate": 1570991523852,
+    "_updatedDate": 1570991523852
   }
 ]

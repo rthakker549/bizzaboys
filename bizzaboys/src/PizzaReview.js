@@ -18,7 +18,8 @@ export default class PizzaReview extends React.Component {
     let pizza = queryString.parse(this.props.location.search).pizza;
     axios.get("http://localhost:9000/reviews/getAllForPizza", { pizza: pizza})
       .then(res => {
-        const data = res.data;
+        let data = res.data;
+        data  = data.filter(x => x.pizza === pizza)
         this.setState({ data });
       })
   }
@@ -26,7 +27,7 @@ export default class PizzaReview extends React.Component {
   return (
     <div className="Portal">
       {this.state.data.length > 0 ? this.state.data.map(el =>
-        <Card className="inventoryCard" key={ el.pizzaName }>
+        <Card className="inventoryCard" key={ el.pizza }>
           <CardBody>
             <CardTitle>{ el.pizza }</CardTitle>
             <br/>
